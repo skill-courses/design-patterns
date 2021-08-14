@@ -1,26 +1,11 @@
 package structural_patterns.adapter;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import basic.BasicTest;
 import org.junit.jupiter.api.Test;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-class CoachTest {
-
-    private final PrintStream standardOut = System.out;
-    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-
-    @BeforeEach
-    public void setUp() {
-        System.setOut(new PrintStream(outputStreamCaptor));
-    }
-
-
+class CoachTest extends BasicTest {
     @Test
     public void the_coach_should_can_deliver_tactics_for_yao_ming() {
         Player mcGrady = new Player("麦迪");
@@ -40,10 +25,4 @@ class CoachTest {
                 姚明防守成功！
                 姚明开始进攻！""", outputStreamCaptor.toString().trim());
     }
-
-    @AfterEach
-    public void tearDown() {
-        System.setOut(standardOut);
-    }
-
 }

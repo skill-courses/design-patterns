@@ -15,6 +15,7 @@ public class Coach{
     private String name;
 
     public void deliverTactics(List<Player> players) {
+        System.out.println(this.name + " deliver the tactics for players!");
         players.forEach(it -> {
             it.defense();
             it.attack();

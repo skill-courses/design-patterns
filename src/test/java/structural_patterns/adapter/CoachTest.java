@@ -28,10 +28,11 @@ class CoachTest {
         ForeignCenter yaoMing = new ForeignCenter("姚明");
         Translator translator = new Translator(yaoMing);
 
-        Coach mcHale = Coach.builder().name("麦克海尔").build();
+        Coach mcHale = Coach.builder().name("范甘迪").build();
         mcHale.deliverTactics(Arrays.asList(mcGrady, battier, translator));
 
         assertEquals("""
+                范甘迪 deliver the tactics for players!
                 麦迪 defense successfully!
                 麦迪 start attack!
                 巴蒂尔 defense successfully!

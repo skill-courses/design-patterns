@@ -30,7 +30,7 @@
 
 ## 模式的结构
 
-![structure-chain-of-responsibility](https://tva1.sinaimg.cn/large/008i3skNgy1gv9hkcq1b7j60aa03sdft02.jpg)
+![structure-chain-of-responsibility](https://tva1.sinaimg.cn/large/008i3skNgy1gv9hqyevihj60e807p0su02.jpg)
 
 该模式主要包含如下几个角色：
 

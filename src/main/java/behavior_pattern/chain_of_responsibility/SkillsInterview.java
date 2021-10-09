@@ -7,7 +7,7 @@ public class SkillsInterview extends Interview {
     }
 
     @Override
-    public Boolean interview(Candidate candidate) {
+    public boolean isPassInterview(Candidate candidate) {
         return candidate.getSkills().contains("java");
     }
 }

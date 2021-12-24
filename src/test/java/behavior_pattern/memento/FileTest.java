@@ -25,6 +25,7 @@ class FileTest {
         file.write("你好，李四");
         versionController.commit(file);
 
+        assertEquals("你好，张三！你好，李四", file.read());
         File lastFile = versionController.reset();
         assertEquals("你好，张三！", lastFile.read());
     }

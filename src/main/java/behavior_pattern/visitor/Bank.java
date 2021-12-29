@@ -7,6 +7,6 @@ public class Bank implements Architecture{
 
     @Override
     public void accept(Visitor visitor) {
-        visitor.visiteBank(this);
+        visitor.visite(this);
     }
 }

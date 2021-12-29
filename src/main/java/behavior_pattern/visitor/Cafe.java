@@ -7,6 +7,6 @@ public class Cafe implements Architecture{
 
     @Override
     public void accept(Visitor visitor) {
-        visitor.visiteCafe(this);
+        visitor.visite(this);
     }
 }

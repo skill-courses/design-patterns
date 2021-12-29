@@ -11,7 +11,7 @@ class CanvasserTest extends BasicTest {
     public void should_can_selling_health_insurance() {
         Community community = new Community();
         Visitor visitor = new Canvasser();
-        visitor.visiteCommunity(community);
+        visitor.visite(community);
 
         assertEquals("""
                 欢迎来到花园小区！
@@ -22,7 +22,7 @@ class CanvasserTest extends BasicTest {
     public void should_can_selling_theft_protection() {
         Bank bank = new Bank();
         Visitor visitor = new Canvasser();
-        visitor.visiteBank(bank);
+        visitor.visite(bank);
 
         assertEquals("""
                 欢迎来到银行！
@@ -33,7 +33,7 @@ class CanvasserTest extends BasicTest {
     public void should_can_selling_fire_insurance() {
         Cafe cafe = new Cafe();
         Visitor visitor = new Canvasser();
-        visitor.visiteCafe(cafe);
+        visitor.visite(cafe);
 
         assertEquals("""
                 欢迎来到咖啡厅！

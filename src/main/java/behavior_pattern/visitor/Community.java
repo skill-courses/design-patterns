@@ -7,6 +7,6 @@ public class Community implements Architecture{
 
     @Override
     public void accept(Visitor visitor) {
-        visitor.visiteCommunity(this);
+        visitor.visite(this);
     }
 }

@@ -1,6 +1,7 @@
 package creational_patterns.factory;
 
 import basic.BasicTest;
+import creational_patterns.factory.abstract_factory.*;
 import creational_patterns.factory.factory.Factory;
 import creational_patterns.factory.factory.PhoneFactory;
 import creational_patterns.factory.factory.TabletFactory;
@@ -42,6 +43,30 @@ class FactoryTest extends BasicTest {
         Product product = factory.produceProduct("华为平板Matepad10.4");
         product.produce();
         assertEquals("平板：华为平板Matepad10.4已经生产完成！", outputStreamCaptor.toString().trim());
+    }
+
+    @Test
+    public void huawei_factory_should_can_produce_phone_or_tablet() {
+        ProductFactory factory = new HuaweiFactory();
+        Phone phone = factory.producePhone();
+        Tablet tablet = factory.produceTablet();
+        phone.producePhone();
+        tablet.produceTablet();
+        assertEquals("""
+                生产华为手机：P50
+                生产华为平板：Matepad10.4""", outputStreamCaptor.toString().trim());
+    }
+
+    @Test
+    public void apple_factory_should_can_produce_phone_or_tablet() {
+        ProductFactory factory = new AppleFactory();
+        Phone phone = factory.producePhone();
+        Tablet tablet = factory.produceTablet();
+        phone.producePhone();
+        tablet.produceTablet();
+        assertEquals("""
+                生产苹果手机：Iphone13
+                生产苹果平板：Ipad4""", outputStreamCaptor.toString().trim());
     }
 
 }
